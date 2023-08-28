@@ -13,7 +13,7 @@ const ResumeForm = () => {
 				formData.append('resume', resume);
 
 				const response = await axios.post(
-					'http://localhost:5000/parse_resume',
+					'http://jayrajr.pythonanywhere.com/parse_resume',
 					formData
 				);
 				setParsedData(response.data);
@@ -34,6 +34,8 @@ const ResumeForm = () => {
 		else setParsedData({});
 		setIsLoading(false);
 	}, [resume]);
+
+	console.log(parsedData);
 
 	return (
 		<div className='w-11/12 sm:w-9/12 lg:w-1/2 bg-white rounded-md drop-shadow-lg flex flex-col gap-5 py-5 px-10'>

@@ -6,7 +6,7 @@ from translators import Translators
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/parse_resume": {"origins": "*"}})
 
 @app.route('/parse_resume', methods=['POST'])
 def parse_resume():
