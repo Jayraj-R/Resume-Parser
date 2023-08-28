@@ -10,7 +10,7 @@ class FileConstants:
     UTF_8 = 'utf-8'
 
 class ResponseConstants:
-    FIRST_NAME = 'first_name'
-    LAST_NAME = 'last_name'
+    FIRST_NAME = 'firstName'
+    LAST_NAME = 'lastName'
     EMAIL = 'email'
     PHONE = 'phone'

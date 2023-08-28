@@ -3,8 +3,10 @@ import os
 from constants import FileConstants
 from parse_resume import parse_resume_content
 from translators import Translators
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/parse_resume', methods=['POST'])
 def parse_resume():
